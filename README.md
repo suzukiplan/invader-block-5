@@ -1,4 +1,4 @@
-# Invader Block 5
+![Invader Block 5](https://raw.githubusercontent.com/suzukiplan/invader-block-5/master/image/iblock.png)
 
 ## Description
 - Invader Block を HTML5 に移植したものです
@@ -46,5 +46,6 @@ of the authors and should not be interpreted as representing official policies,
 either expressed or implied, of the FreeBSD Project.
 ```
 
-### audio and graphics assets (ゲームの音+映像)
+### audio and graphic assets (ゲームの音+映像)
 [Creative Commons - Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)
+![Presented by SUZUKI PLAN](https://raw.githubusercontent.com/suzukiplan/invader-block-5/master/image/suzukiplan.png)
