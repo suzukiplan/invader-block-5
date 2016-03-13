@@ -225,6 +225,7 @@ MY.mainloop = function() {
         if (MY.gameover.label) {
             if (140 < MY.gameover.label.y) MY.gameover.label.y -= 2;
             else if (!MY.result) {
+                if (MY.allClear) MY.score += MY.medalNum * 256;
                 MY.result = new Label("SCORE " + MY.score + "0 pts");
                 MY.result.x = 360;
                 MY.result.y = 176;
@@ -635,7 +636,12 @@ MY.mainloop = function() {
             if (0 == MY.enemy.length || !MY.ball || !MY.bar) {
                 MY.gameover = new Object();
                 MY.gameover.frame = 0;
-                MY.gameover.label = new Label("GAME OVER");
+                if (0 == MY.enemy.length) {
+                    MY.gameover.label = new Label("ALL CLEAR");
+                    MY.allClear = true;
+                } else {
+                    MY.gameover.label = new Label("GAME OVER");
+                }
                 MY.gameover.label.x = 360;
                 MY.gameover.label.y = (360 - 24) / 2;
                 MY.gameover.label.color = "white";
@@ -929,6 +935,7 @@ onload = function() {
         MY.gameover = undefined;
         MY.curtain2 = undefined;
         MY.result = undefined;
+        MY.allClear = false;
 
         MY.g.rootScene.addEventListener(Event.ENTER_FRAME, MY.mainloop);
     }
